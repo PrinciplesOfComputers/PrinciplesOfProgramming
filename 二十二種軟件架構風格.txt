@@ -1,4 +1,3 @@
-
 二十二種軟件架構風格
 
 第一種：Pipe and Filter
