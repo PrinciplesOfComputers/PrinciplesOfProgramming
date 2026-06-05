@@ -9,3 +9,4 @@
 第四個流程是滙編器（as）將 hello.s 翻譯成機器語言程序，得到 hello.o。
 
 第五個流程是鏈接器（ld）將 hello.o 和 printf.o 合并在一起，得到另一個機器語言程序 hello。
+

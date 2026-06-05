@@ -9,3 +9,4 @@
 第四段映像是 heap segment，包含 dynamically allocated memory。
 
 第五段映像是 stack segment，包含 call stack。
+
