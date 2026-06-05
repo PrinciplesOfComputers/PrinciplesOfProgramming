@@ -1,4 +1,3 @@
-
 映像的佈局
 
 第一段映像是 code segment，包含 executable instruction。
