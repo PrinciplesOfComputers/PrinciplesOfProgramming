@@ -1,5 +1,15 @@
 編程的步驟
 
+#include <stdio.h>
+
+int main() {
+
+  printf("Hello World!\n");
+
+  return 0;
+
+}
+
 第一步是程序員（programmer）使用 C 語言編程，得到 hello.c。
 
 第二步是預處理器（cpp）根據以字符 # 開頭的命令修改原始的 C 程序，得到另一个 C 語言程序 hello.i。
