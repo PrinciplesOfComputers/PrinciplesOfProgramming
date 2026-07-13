@@ -134,7 +134,7 @@ document.replace(what, with);
 第十四種：Interpreter
 
 問題：想讓用戶使用一種專門的領域語言表示信息。
-辦法：實現一個專門的解釋器。
+辦法：做一個專門的解釋器。
 
 第十五種：Iterator
 
