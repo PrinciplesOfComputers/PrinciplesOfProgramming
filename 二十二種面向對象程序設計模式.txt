@@ -48,12 +48,12 @@ ScrollBar scrollBar = factory.createScrollBar();
 第三種：Prototype
 
 問題：想讓一個 object 返回一個自己的克隆。
-辦法：給該 object 對應的 class 增加一個方法，在該方法中調用構造器並傳入 this，讓構造器將 this 的狀態複製給新創建的 object 然後返回。
+辦法：給該 object 對應的 class 增加一個方法，在該方法中調用 constructor 並傳入 this，讓 constructor 將 this 的狀態複製給新創建的 object 然後返回。
 
 第四種：Singleton
 
 問題：想讓一個 class 擁有一組固定的實例。
-辦法：將這組實例存儲在該 class 的一個靜態字段中，並提供一個靜態方法，負責返回指定的實例。
+辦法：將這組固定的實例存儲在該 class 的一個靜態字段中，並提供一個靜態方法，用於返回指定的實例。
 
 第五種：Adapter
 
@@ -62,7 +62,7 @@ ScrollBar scrollBar = factory.createScrollBar();
 
 第六種：Intermediate Layer
 
-App 實例委托 Window 實例：
+App 實例委托 Window 具體類實例：
 
 // Window window = new IconWindow();
 Window window = new TransientWindow();
@@ -75,7 +75,7 @@ Window 具體類繼承 Window 抽象類：
 drawRect();
 drawText();
 
-Window 實例委托 WindowImp 實例：
+Window 抽象類實例委托 WindowImp 具體類實例：
 
 // WindowImp windowImp = new XWindowImp();
 WindowImp windowImp = new PMWindowImp();
@@ -86,7 +86,7 @@ windowImp.devDrawText();
 第七種：Composite
 
 問題：想通過同一套 interface 使用單一部件和合成部件。
-辦法：讓合成部件將用戶請求轉發給它的所有内部部件。
+辦法：讓合成部件將請求轉發給它的所有内部部件。
 
 第八種：Decorator
 
@@ -111,7 +111,7 @@ windowImp.devDrawText();
 第十二種：Chain of Responsibility
 
 問題：想通過同一套 interface 使用所有服務員。
-辦法：讓所有服務員實現同一套 interface。在服務員的每一個服務辦法中，要麽提供服務，要麽把請求轉發給他的直屬領導。
+辦法：讓所有服務員實現同一套 interface。在服務員的每一個服務方法中，要麽提供服務，要麽把請求轉發給他的直屬領導。
 
 第十三種：Command
 
@@ -139,7 +139,7 @@ document.replace(what, with);
 第十五種：Iterator
 
 問題：想讓用戶以迭代的方式訪問集合元素。
-辦法：實現一個迭代器。
+辦法：為該集合實現一個迭代器。
 
 第十六種：Mediator
 
@@ -188,10 +188,10 @@ Compositor compositor = new ArrayCompositor();
 
 compositor.compose();
 
-第二十一種：Method Template
+第二十一種：Template Method
 
 問題：想讓父類方法能夠調用子類方法。
-辦法：讓父類方法定義步驟，每個步驟調用一個抽象方法，讓子類實現這些抽象方法。
+辦法：讓父類定義一些抽象方法，並在其它方法中調用這些抽象方法，讓子類實現這些抽象方法。
 
 第二十二種：Visitor
 
