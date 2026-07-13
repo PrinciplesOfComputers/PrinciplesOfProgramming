@@ -47,18 +47,18 @@ ScrollBar scrollBar = factory.createScrollBar();
 
 第三種：Prototype
 
-問題：想讓一個對象返回一個自己的克隆。
-辦法：給這個對象增加一個 clone 方法，在 clone 方法中調用構造器並傳入 this，讓構造器將對象的狀態複製給新創建的對象然後返回。
+問題：想讓一個 object 返回一個自己的克隆。
+辦法：給該 object 對應的 class 增加一個方法，在該方法中調用構造器並傳入 this，讓構造器將 this 的狀態複製給新創建的 object 然後返回。
 
 第四種：Singleton
 
-問題：想讓一個類別擁有一組固定的實例。
-辦法：把這些實例存儲在類別的靜態字段中，並提供一個靜態方法，負責返回指定的實例。
+問題：想讓一個 class 擁有一組固定的實例。
+辦法：將這組實例存儲在該 class 的一個靜態字段中，並提供一個靜態方法，負責返回指定的實例。
 
 第五種：Adapter
 
-問題：想在不修改已有類別的前提下改變已有類別的型。
-辦法：讓包裝類別繼承已有類別，或讓包裝類別的實例委托已有類別的實例。
+問題：包裝已有 class。
+辦法：讓包裝 class 繼承已有 class，或讓包裝 class 的實例委托已有 class 的實例。
 
 第六種：Intermediate Layer
 
@@ -70,12 +70,12 @@ Window window = new TransientWindow();
 window.drawBorder();
 window.drawCloseButton();
 
-Window 具體類別繼承 Window 抽象類別：
+Window 具體類繼承 Window 抽象類：
 
 drawRect();
 drawText();
 
-Window 抽象類別委托 WindowImp：
+Window 實例委托 WindowImp 實例：
 
 // WindowImp windowImp = new XWindowImp();
 WindowImp windowImp = new PMWindowImp();
@@ -85,13 +85,13 @@ windowImp.devDrawText();
 
 第七種：Composite
 
-問題：想讓用戶通過同一個型使用單一部件和合成部件。
+問題：想讓用戶通過同一套 interface 使用單一部件和合成部件。
 辦法：讓合成部件將用戶請求轉發給它的所有内部部件。
 
 第八種：Decorator
 
-問題：想讓用戶通過同一個型使用原始類別和裝飾類別。
-辦法：讓裝飾類別的實例委托原始類別的實例。
+問題：想讓用戶通過同一套 interface 使用原始類和裝飾類。
+辦法：讓裝飾類的實例委托原始類的實例。
 
 第九種：Facade
 
@@ -105,13 +105,13 @@ windowImp.devDrawText();
 
 第十一種：Proxy
 
-問題：想讓用戶通過同一個型使用實體類別和代理類別。
-辦法：讓代理類別的實例委托實體類別的實例。
+問題：想讓用戶通過同一套 interface 使用實體類和代理類。
+辦法：讓代理類的實例委托實體類的實例。
 
 第十二種：Chain of Responsibility
 
-問題：想讓人民通過同一個型使用所有服務員。
-辦法：讓所有服務員實現同一個型。在服務員的每一個服務辦法中，要麽提供服務，要麽把請求轉發給他的直屬領導。
+問題：想讓人民通過同一套 interface 使用所有服務員。
+辦法：讓所有服務員實現同一套 interface。在服務員的每一個服務辦法中，要麽提供服務，要麽把請求轉發給他的直屬領導。
 
 第十三種：Command
 
@@ -190,8 +190,8 @@ compositor.compose();
 
 第二十一種：Method Template
 
-問題：想讓父類別方法能夠調用子類別方法。
-辦法：讓父類別方法定義步驟，每個步驟調用一個抽象方法，讓子類別實現這些抽象方法。
+問題：想讓父類方法能夠調用子類方法。
+辦法：讓父類方法定義步驟，每個步驟調用一個抽象方法，讓子類實現這些抽象方法。
 
 第二十二種：Visitor
 
