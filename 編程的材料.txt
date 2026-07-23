@@ -6,6 +6,6 @@
 
 第三種材料是 control flow statements。
 
-第四種材料是 user-defined interfaces。
+第四種材料是 interface creation syntax。
 
-第五種材料是 user-defined classes。
+第五種材料是 class creation syntax。
